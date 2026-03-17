@@ -8,66 +8,69 @@
     <nav class="site-nav">
       <a href="#approach">Approach</a>
       <a href="#practice">Practice</a>
-      <a href="#products">Products</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#login">Login</a>
-      <a href="#begin" class="nav-cta">Begin Here</a>
+      <a href="#practice" class="nav-link-quiet">Begin</a>
     </nav>
   </header>
 
   <section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="/video.mp4" type="video/mp4" />
-  </video>
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/video.mp4" type="video/mp4" />
+    </video>
 
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 
-  <div class="logo-wrap">
-    <img src="/logo.png" alt="Yoga Loving logo" />
-  </div>
+    <div class="logo-wrap">
+      <img src="/logo.png" alt="Yoga Loving logo" />
+    </div>
 
-  <div class="content">
-    <h1 class="hero-title">Yoga Loving</h1>
-    <p class="trio">Calm • Balance • Ease</p>
-    <a href="#practice" class="hero-link">Enter the Practice</a>
-  </div>
-</section>
+    <div class="content">
+      <h1 class="hero-title">Yoga Loving</h1>
+      <p class="trio">Calm • Balance • Ease</p>
+      <a href="#practice" class="hero-link">Enter the Practice</a>
+    </div>
+  </section>
 </section>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
 
-:global(html, body) {
+html, body {
   margin: 0;
   padding: 0;
-  background: #ece8df;
 }
 
-:global(body) {
+body {
   font-family: 'DM Sans', sans-serif;
-  color: #352922;
+  background: #ece8df;
+  color: #3a2d25;
 }
 
 .page {
   min-height: 100vh;
-  padding: 12px 18px 0;
   background: #ece8df;
 }
 
 .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 6px 2px 18px;
+  align-items: center;
+  padding: 26px 34px;
+  z-index: 5;
+  background: transparent;
 }
 
 .site-brand {
-  color: #352922;
-  text-decoration: none;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  color: #3a2d25;
+  text-decoration: none;
 }
 
 .site-nav {
@@ -77,25 +80,22 @@
 }
 
 .site-nav a {
-  color: #4a3a31;
-  text-decoration: none;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 400;
+  color: rgba(58, 45, 37, 0.82);
+  text-decoration: none;
 }
 
-.nav-cta {
-  padding: 14px 28px;
-  background: #312622;
-  color: #f6efe7 !important;
-  border-radius: 999px;
-  font-weight: 500 !important;
+.nav-link-quiet {
+  border-bottom: 1px solid rgba(58, 45, 37, 0.35);
+  padding-bottom: 2px;
 }
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 86px);
+  min-height: 100vh;
+  width: 100%;
   overflow: hidden;
-  border-radius: 0 0 16px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,21 +113,21 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(28, 20, 14, 0.12);
+  background: rgba(28, 20, 14, 0.06);
   z-index: 1;
 }
 
 .logo-wrap {
   position: absolute;
-  top: 18px;
+  top: 118px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
 }
 
 .logo-wrap img {
-  width: 210px;
-  height: 210px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
@@ -137,142 +137,101 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 980px;
-  padding: 270px 24px 56px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 430px 24px 60px;
   text-align: center;
 }
 
 .hero-title {
   margin: 0;
+  font-size: 4.7rem;
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.045em;
   color: #3a2d25;
-  font-size: 5.3rem;
-  line-height: 0.96;
-  font-weight: 600;
-  letter-spacing: -0.05em;
 }
 
 .trio {
-  margin: 16px 0 0;
-  color: rgba(58, 45, 37, 0.72);
+  margin: 14px 0 0;
   font-size: 1rem;
   font-weight: 400;
+  color: rgba(58, 45, 37, 0.72);
 }
 
 .hero-link {
   display: inline-block;
-  margin-top: 22px;
-  color: #3a2d25;
+  margin-top: 18px;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  border-bottom: 1px solid rgba(58, 45, 37, 0.45);
+  color: #3a2d25;
+  border-bottom: 1px solid rgba(58, 45, 37, 0.42);
   padding-bottom: 4px;
 }
 
-.statement {
-  max-width: 860px;
-  margin: 44px auto 0;
-}
-
-.lead {
-  margin: 0 0 10px;
-  color: #f8f2e8;
-  font-size: 1.45rem;
-  line-height: 1.4;
-  font-weight: 500;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
-}
-
-.claim {
-  margin: 0 0 18px;
-  color: #f8f2e8;
-  font-size: 4rem;
-  line-height: 1.03;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-}
-
-.body {
-  max-width: 760px;
-  margin: 0 auto 10px;
-  color: #f5efe5;
-  font-size: 1.12rem;
-  line-height: 1.65;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .site-header {
-    flex-direction: column;
-    gap: 14px;
-    padding-bottom: 14px;
+    padding: 20px 20px;
   }
 
   .site-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px 18px;
+    gap: 16px;
+  }
+
+  .logo-wrap {
+    top: 96px;
   }
 
   .logo-wrap img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
   }
 
   .content {
-    padding-top: 220px;
+    padding-top: 360px;
   }
 
   .hero-title {
     font-size: 3.8rem;
   }
-
-  .claim {
-    font-size: 3rem;
-  }
 }
 
 @media (max-width: 640px) {
-  .page {
-    padding: 10px 10px 0;
+  .site-header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 14px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
   }
 
   .logo-wrap {
-    top: 16px;
+    top: 120px;
   }
 
   .logo-wrap img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   .content {
-    padding: 170px 18px 36px;
+    padding-top: 300px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .hero-title {
     font-size: 2.8rem;
   }
 
-  .trio {
-    font-size: 0.92rem;
-  }
-
-  .lead {
-    font-size: 1.1rem;
-  }
-
-  .claim {
-    font-size: 2.3rem;
-  }
-
-  .body {
-    font-size: 0.98rem;
-  }
-
-  .nav-cta {
-    padding: 10px 18px;
+  .trio,
+  .hero-link {
+    font-size: 0.95rem;
   }
 }
 </style>
