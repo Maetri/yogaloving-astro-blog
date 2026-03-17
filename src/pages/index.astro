@@ -1,31 +1,118 @@
-<section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="/video.mp4" type="video/mp4" />
-  </video>
+---
+---
 
-  <div class="overlay"></div>
+<section class="page">
+  <header class="site-header">
+    <a href="/" class="site-brand">Yoga Loving</a>
 
-  <div class="logo-wrap">
-    <img src="/logo.png" alt="Yoga Loving logo" />
-  </div>
+    <nav class="site-nav">
+      <a href="#approach">Approach</a>
+      <a href="#practice">Practice</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
+      <a href="#begin" class="nav-cta">Begin Here</a>
+    </nav>
+  </header>
 
-  <div class="content">
-    <p class="brand">YOGA LOVING NEW</p>
-    <h1 class="headline">THIS SHOULD LOOK DIFFERENT</h1>
-  </div>
+  <section class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="logo-wrap">
+      <img src="/logo.png" alt="Yoga Loving logo" />
+    </div>
+
+    <div class="content">
+      <h1 class="hero-title">Yoga Loving</h1>
+
+      <p class="trio">Calm • Balance • Ease</p>
+
+      <a href="#begin" class="hero-link">Enter the Practice</a>
+
+      <div class="statement">
+        <p class="lead">Our practice begins with a counterintuitive premise:</p>
+
+        <p class="claim">it is not about grit.</p>
+
+        <p class="body">
+          It is about working with the body as it is.
+        </p>
+
+        <p class="body">
+          Learning to feel what is happening inside the body,
+          and to notice how the nervous system responds, moment to moment.
+        </p>
+      </div>
+    </div>
+  </section>
 </section>
 
 <style>
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:global(html, body) {
   margin: 0;
   padding: 0;
+  background: #ece8df;
+}
+
+:global(body) {
+  font-family: 'DM Sans', sans-serif;
+  color: #352922;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 12px 18px 0;
+  background: #ece8df;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 2px 18px;
+}
+
+.site-brand {
+  color: #352922;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-nav a {
+  color: #4a3a31;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 400;
+}
+
+.nav-cta {
+  padding: 14px 28px;
+  background: #312622;
+  color: #f6efe7 !important;
+  border-radius: 999px;
+  font-weight: 500 !important;
 }
 
 .hero {
   position: relative;
-  min-height: 100vh;
-  width: 100%;
+  min-height: calc(100vh - 86px);
   overflow: hidden;
+  border-radius: 0 0 16px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,43 +124,172 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.2);
+  background: rgba(28, 20, 14, 0.12);
+  z-index: 1;
 }
 
 .logo-wrap {
   position: absolute;
-  top: 50px;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
 }
 
 .logo-wrap img {
-  width: 220px;
-  height: 220px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
 }
 
 .content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 980px;
+  padding: 270px 24px 56px;
   text-align: center;
-  color: white;
-  padding-top: 260px;
 }
 
-.brand {
-  font-size: 1.2rem;
-  letter-spacing: 0.2em;
+.hero-title {
+  margin: 0;
+  color: #3a2d25;
+  font-size: 5.3rem;
+  line-height: 0.96;
+  font-weight: 600;
+  letter-spacing: -0.05em;
 }
 
-.headline {
+.trio {
+  margin: 16px 0 0;
+  color: rgba(58, 45, 37, 0.72);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.hero-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: #3a2d25;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(58, 45, 37, 0.45);
+  padding-bottom: 4px;
+}
+
+.statement {
+  max-width: 860px;
+  margin: 44px auto 0;
+}
+
+.lead {
+  margin: 0 0 10px;
+  color: #f8f2e8;
+  font-size: 1.45rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.14);
+}
+
+.claim {
+  margin: 0 0 18px;
+  color: #f8f2e8;
   font-size: 4rem;
-  margin-top: 10px;
+  line-height: 1.03;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.body {
+  max-width: 760px;
+  margin: 0 auto 10px;
+  color: #f5efe5;
+  font-size: 1.12rem;
+  line-height: 1.65;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 1000px) {
+  .site-header {
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 14px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 18px;
+  }
+
+  .logo-wrap img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .content {
+    padding-top: 220px;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .claim {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 10px 10px 0;
+  }
+
+  .logo-wrap {
+    top: 16px;
+  }
+
+  .logo-wrap img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .content {
+    padding: 170px 18px 36px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .trio {
+    font-size: 0.92rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .claim {
+    font-size: 2.3rem;
+  }
+
+  .body {
+    font-size: 0.98rem;
+  }
+
+  .nav-cta {
+    padding: 10px 18px;
+  }
 }
 </style>
