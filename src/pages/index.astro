@@ -10,37 +10,16 @@
   </div>
 
   <div class="content">
-    <p class="brand">Yoga Loving</p>
-
-    <h1 class="subhead">
-      Our practice begins with a counterintuitive premise:
-    </h1>
-
-    <h2 class="headline">
-      it is not about grit.
-    </h2>
-
-    <p class="body">
-      It is about working with the body as it is.
-    </p>
-
-    <p class="body">
-      Learning to feel what is happening inside the body,<br />
-      and to notice how the nervous system responds, moment to moment.
-    </p>
+    <p class="brand">YOGA LOVING NEW</p>
+    <h1 class="headline">THIS SHOULD LOOK DIFFERENT</h1>
   </div>
 </section>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
-
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
 }
-
-/* layout */
 
 .hero {
   position: relative;
@@ -58,105 +37,43 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(20, 16, 12, 0.28);
-  z-index: 1;
+  background: rgba(0,0,0,0.2);
 }
-
-/* logo */
 
 .logo-wrap {
   position: absolute;
-  top: 64px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
 }
 
 .logo-wrap img {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
 }
-
-/* content */
 
 .content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  padding: 260px 24px 40px;
   text-align: center;
-  color: #f8f4ee;
+  color: white;
+  padding-top: 260px;
 }
-
-/* typography */
 
 .brand {
-  margin: 0 0 12px;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
-.subhead {
-  margin: 0 0 12px;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.4;
-  opacity: 0.9;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
 }
 
 .headline {
-  margin: 0 0 20px;
-  font-family: 'Playfair Display', serif;
   font-size: 4rem;
-  font-weight: 600;
-  line-height: 1.05;
-}
-
-.body {
-  margin: 0 auto 14px;
-  max-width: 640px;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-/* responsive */
-
-@media (max-width: 900px) {
-  .logo-wrap {
-    top: 40px;
-  }
-
-  .logo-wrap img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .content {
-    padding-top: 200px;
-  }
-
-  .subhead {
-    font-size: 1.2rem;
-  }
-
-  .headline {
-    font-size: 2.6rem;
-  }
-
-  .body {
-    font-size: 1rem;
-  }
+  margin-top: 10px;
 }
 </style>
