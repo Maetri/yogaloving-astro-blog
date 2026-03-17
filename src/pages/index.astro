@@ -1,9 +1,3 @@
-<h1 style="position:absolute;top:20px;left:20px;color:red;z-index:9999;">
-TEST
-</h1>
----
----
-
 <section class="hero">
   <video autoplay muted loop playsinline class="bg-video">
     <source src="/video.mp4" type="video/mp4" />
@@ -12,25 +6,29 @@ TEST
   <div class="overlay"></div>
 
   <div class="logo-wrap">
-    <img src="/logo.png" alt="Maetri logo" />
+    <img src="/logo.png" alt="Yoga Loving logo" />
   </div>
 
   <div class="content">
-  <p class="brand">Yoga Loving</p>
+    <p class="brand">Yoga Loving</p>
 
-  <h1>Our practice begins with a counterintuitive premise:</h1>
+    <h1 class="subhead">
+      Our practice begins with a counterintuitive premise:
+    </h1>
 
-  <h2>it is not about grit.</h2>
+    <h2 class="headline">
+      it is not about grit.
+    </h2>
 
-  <p class="body">
-    It is about working with the body as it is.
-  </p>
+    <p class="body">
+      It is about working with the body as it is.
+    </p>
 
-  <p class="body">
-    Learning to feel what is happening inside the body,<br />
-    and to notice how the nervous system responds, moment to moment.
-  </p>
-</div>
+    <p class="body">
+      Learning to feel what is happening inside the body,<br />
+      and to notice how the nervous system responds, moment to moment.
+    </p>
+  </div>
 </section>
 
 <style>
@@ -39,7 +37,10 @@ TEST
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
+
+/* layout */
 
 .hero {
   position: relative;
@@ -48,104 +49,114 @@ html, body {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-  .bg-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-  }
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(20, 16, 12, 0.28);
-    z-index: 1;
-  }
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 12, 0.28);
+  z-index: 1;
+}
 
+/* logo */
+
+.logo-wrap {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.logo-wrap img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* content */
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 260px 24px 40px;
+  text-align: center;
+  color: #f8f4ee;
+}
+
+/* typography */
+
+.brand {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.subhead {
+  margin: 0 0 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.headline {
+  margin: 0 0 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.body {
+  margin: 0 auto 14px;
+  max-width: 640px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
   .logo-wrap {
-    position: absolute;
-    top: 56px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
+    top: 40px;
   }
 
   .logo-wrap img {
-    width: 136px;
-    height: 136px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    width: 120px;
+    height: 120px;
   }
 
   .content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 220px 24px 40px;
-    text-align: center;
-    color: #f8f4ee;
+    padding-top: 200px;
   }
 
-  .eyebrow {
-    margin: 0 0 14px;
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.95;
+  .subhead {
+    font-size: 1.2rem;
   }
 
-  h1 {
-    margin: 0 0 14px;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.3;
-  }
-
-  h2 {
-    margin: 0 0 18px;
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.05;
+  .headline {
+    font-size: 2.6rem;
   }
 
   .body {
-    margin: 0 auto 14px;
-    max-width: 640px;
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1rem;
   }
-
-  @media (max-width: 900px) {
-    .logo-wrap {
-      top: 40px;
-    }
-
-    .logo-wrap img {
-      width: 112px;
-      height: 112px;
-    }
-
-    .content {
-      padding-top: 180px;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-    }
-
-    .body {
-      font-size: 1rem;
-    }
-  }
+}
 </style>
